@@ -1,19 +1,24 @@
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+
 const MainContent = () => {
   return (
     <section>
-      <section className=" container ">
+      <Navbar />
+      <section id="about" className=" container ">
         <div className="row">
-          <div className=" col-md-8 info">
+          <div className="col-12 col-md-8 info">
             <div>
               <h1 className="primary name">Alok Kumar</h1>
               <p className="h5  text-secondary">Full Stack Web Developer</p>
             </div>
             <div className="d-flex mt-4 mb-4">
               <div className="text-secondary">
-                <i class="bi bi-envelope "></i>&nbsp; alok.8kumar21@gmail.com
+                <i className="bi bi-envelope "></i>&nbsp;
+                alok.8kumar21@gmail.com
               </div>
               <div className=" ms-3 text-secondary">
-                <i class="bi bi-geo-alt"></i>&nbsp; Ayodhya, India
+                <i className="bi bi-geo-alt"></i>&nbsp; Ayodhya, India
               </div>
             </div>
             <div>
@@ -26,21 +31,30 @@ const MainContent = () => {
               </p>
             </div>
             <div className="mt-4 mb-4">
-              <button className="btn btn-light ">
-                <i class="bi bi-download"></i>&nbsp;&nbsp;Resume
-              </button>
-              <button className="btn ms-3 border">
-                <i class="bi bi-github text-secondary"></i>
-              </button>
-              <button className="btn ms-3 border">
-                <i class="bi bi-envelope text-secondary"></i>
-              </button>
-              <button className="btn ms-3  border">
-                <i class="bi bi-linkedin  text-secondary"></i>
-              </button>
+              <Link download={true} className="btn btn-light ">
+                <i className="bi bi-download"></i>&nbsp;&nbsp;Resume
+              </Link>
+              <Link
+                to="https://github.com/alok-kumar21"
+                className="btn ms-3 border"
+              >
+                <i className="bi bi-github text-secondary"></i>
+              </Link>
+              <Link
+                to="mailto:alok.8kumar21@gmail.com"
+                className="btn ms-3 border"
+              >
+                <i className="bi bi-envelope text-secondary"></i>
+              </Link>
+              <Link
+                to="https://www.linkedin.com/in/iamalokkumar/"
+                className="btn ms-3  border"
+              >
+                <i className="bi bi-linkedin  text-secondary"></i>
+              </Link>
             </div>
           </div>
-          <div className="col-md-4    name">
+          <div className="col-12 col-md-4    name">
             <div className="mt-4">
               <span type="button" className="position-relative">
                 <div className="main-skill ms-5 border-0 p-3 rounded bg-dark d-inline-block">
@@ -109,7 +123,7 @@ const MainContent = () => {
           <h1 className="text-white">Education</h1>
         </div>
         <div className="d-flex mt-4 autoShow">
-          <i class="bi bi-mortarboard h2 text-secondary"></i>
+          <i className="bi bi-mortarboard h2 text-secondary"></i>
           <div>
             <h5 className="mt-2 ms-3 text-white">
               Babu Banarasi Das University, Lucknow
@@ -120,7 +134,7 @@ const MainContent = () => {
           </div>
         </div>
         <div className="d-flex mt-5 autoShow">
-          <i class="bi bi-mortarboard h2 text-secondary"></i>
+          <i className="bi bi-mortarboard h2 text-secondary"></i>
           <div>
             <h5 className="mt-2 ms-3 text-white">
               Makhanlal Chaturvedi National University, Bhopal
@@ -226,7 +240,7 @@ const MainContent = () => {
                 className="img-fluid ms-1"
               />
             </div>
-            <p className="text-center text-secondary mt-1 ">MongoDB</p>
+            <p className="text-center text-secondary mt-1 ms-4">MongoDB</p>
           </div>
         </div>
 
@@ -266,15 +280,217 @@ const MainContent = () => {
           </div>
           <div>
             <div className="border-0 bg-dark p-3 rounded ms-4">
-              <i class="bi bi-caret-up-fill text-white h3"></i>
+              <i className="bi bi-caret-up-fill text-white h3"></i>
             </div>
             <p className="text-center text-secondary mt-1 ms-3">Vercel</p>
           </div>
         </div>
       </section>
-      <section id="projects" className="projects container">
+      <section id="projects" className="projects autoShow container">
         <div>
           <h1 className="text-white">Projects</h1>
+        </div>
+        <div className="card     mt-5">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img
+                src="https://private-user-images.githubusercontent.com/69728237/446382811-0c04885f-e37c-4b2a-9fa5-ae5253e619bf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0ODEyNjMsIm5iZiI6MTc0OTQ4MDk2MywicGF0aCI6Ii82OTcyODIzNy80NDYzODI4MTEtMGMwNDg4NWYtZTM3Yy00YjJhLTlmYTUtYWU1MjUzZTYxOWJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDE0NTYwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI5YTg5NzE3M2NhMjExMzg5NTk4MTljNjk1YmNiOTEyZTA3ZmRiNzY4MjI0YTlmNTEwOGM5YTFiY2NlNjA2Y2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.xWItc7FbYmx0mvMmC4CNj1mJO9hTtEFUIP8b4KJar5w"
+                alt=""
+                className="w-100 img-fluid"
+              />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body ">
+                <h3 className="card-title text-white">Pendora</h3>
+                <p className="card-text text-secondary">
+                  The Pendora is a MERN stack (MongoDB, Express, React, Node.js)
+                  application designed to help users discover and explore
+                  various products. It features a list of Products with
+                  filtering options By Price, rating, and Product, search,
+                  Product add to Cart, and add to wish list, making it easy to
+                  find relevant products.
+                </p>
+                <span class="badge text-bg-dark mb-3">React</span>
+                <span class="badge text-bg-dark mb-3 ms-3">Express.js</span>
+                <span class="badge text-bg-dark mb-3  ms-3">Node.js</span>
+                <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
+                <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
+                <span class="badge text-bg-dark mb-3  ms-3">Context API</span>
+
+                <ul className="text-secondary">
+                  <li>Search product.</li>
+                  <li> Add item to cart.</li>
+                  <li>Remove item from cart</li>
+                  <li>Add item to wishlist.</li>
+                </ul>
+                <Link
+                  to="https://pendora-frontend.vercel.app/"
+                  className="btn  btn-light"
+                  target="_blank"
+                >
+                  <i class="bi bi-box-arrow-up-right"></i>&nbsp;Live
+                </Link>
+                <Link
+                  to="https://github.com/alok-kumar21/Pendora-frontend"
+                  className="btn  btn-outline-light ms-4"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i>&nbsp;github
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card  autoShow   mt-5">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img
+                src="https://private-user-images.githubusercontent.com/69728237/424608071-23af58f2-276d-4f62-bf02-b9d41a53c579.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0ODM5NDgsIm5iZiI6MTc0OTQ4MzY0OCwicGF0aCI6Ii82OTcyODIzNy80MjQ2MDgwNzEtMjNhZjU4ZjItMjc2ZC00ZjYyLWJmMDItYjlkNDFhNTNjNTc5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDE1NDA0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ3OTQxNzU4ZDJjZDM4MDk1MWI3M2UxOGJkNTk5MWM4OWE3ODM3ZDM1YzFiNjdiZmRmZTdiYzY1OGYyMWVkMTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BiCLgw2eoZ194bscw5jqZQ8pSSrinM1lFWWM73TO3V8"
+                alt="meetup image"
+                className="w-100 img-fluid"
+              />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body ">
+                <h3 className="card-title text-white">MeetUp</h3>
+                <p className="card-text text-secondary">
+                  The Meetup App is a MERN stack (MongoDB, Express, React,
+                  Node.js) application designed to help users discover and
+                  explore various events. It features a list of meetup events
+                  with filtering options for online and offline events, making
+                  it easy to find relevant gatherings. A search bar allows users
+                  to quickly locate specific events by keywords.
+                </p>
+                <span class="badge text-bg-dark mb-3">React</span>
+                <span class="badge text-bg-dark mb-3 ms-3">Express.js</span>
+                <span class="badge text-bg-dark mb-3  ms-3">Node.js</span>
+                <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
+                <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
+
+                <ul className="text-secondary">
+                  <li>Event Listing</li>
+                  <li>Search a Event</li>
+                  <li>View Detail Event</li>
+                  <li>Filter Online and offline Events.</li>
+                </ul>
+                <Link
+                  to="https://meet-up-frontend-chi.vercel.app/"
+                  className="btn  btn-light"
+                  target="_blank"
+                >
+                  <i class="bi bi-box-arrow-up-right"></i>&nbsp;Live
+                </Link>
+                <Link
+                  to="https://github.com/alok-kumar21/MeetUp-frontend"
+                  className="btn  btn-outline-light ms-4"
+                  target="_blank"
+                >
+                  <i class="bi bi-github "></i>&nbsp;github
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="contact  autoShow container">
+        <div>
+          <h1 className="text-white">Contact Me</h1>
+          <div className="row">
+            <div className="col-md-6">
+              <div>
+                <h5 className="text-white mt-4">Get in Touch</h5>
+              </div>
+
+              <div>
+                <div className="d-flex mt-5 ">
+                  <div className="d-inline mt-3">
+                    <span class="bi bi-envelope text-white h5 bg-dark p-3  rounded-circle"></span>
+                  </div>
+                  <div className="d-inline ms-3 ">
+                    <span className="text-secondary  text-center">Email</span>
+                    <br />
+                    <span className="text-white text-center">
+                      alok.8kumar21@gmail.com
+                    </span>
+                  </div>
+                </div>
+                <div className="d-flex mt-4 ">
+                  <div className="d-inline mt-3">
+                    <span class="bi bi-geo-alt text-white h5 bg-dark p-3  rounded-circle"></span>
+                  </div>
+                  <div className="d-inline ms-3 ">
+                    <span className="text-secondary  text-center">
+                      Location
+                    </span>
+                    <br />
+                    <span className="text-white text-center">
+                      Ayodhya, India
+                    </span>
+                  </div>
+                </div>
+                <div className="d-flex mt-4 ">
+                  <div className="d-inline mt-3">
+                    <span class="bi bi-linkedin text-white h5 bg-dark p-3  rounded-circle"></span>
+                  </div>
+                  <div className="d-inline ms-3 ">
+                    <span className="text-secondary  text-center">
+                      Linkedin
+                    </span>
+                    <br />
+                    <Link
+                      to="https://www.linkedin.com/in/iamalokkumar/"
+                      className="text-white text-center"
+                      target="_blank"
+                    >
+                      linkedin.com/in/iamalokkumar
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 autoShow">
+              <div>
+                <h5 className="text-white mt-4">Send a Message</h5>
+              </div>
+              <form className="mt-5">
+                <label className="form-label text-white" htmlFor="name">
+                  Name
+                </label>
+                <br />
+                <input
+                  className="form-control"
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                />
+                <label className="form-label text-white mt-4" htmlFor="email">
+                  Email
+                </label>
+                <br />
+                <input
+                  className="form-control"
+                  type="email"
+                  placeholder="Email"
+                />
+                <br />
+                <label className="form-label text-white" htmlFor="">
+                  Message
+                </label>
+                <br />
+                <textarea
+                  className="form-control"
+                  name=""
+                  rows="5"
+                  cols="40"
+                  id=""
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" className="btn mt-4 btn-light">
+                  Submit Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </section>

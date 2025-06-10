@@ -12,6 +12,9 @@ nav {
 section {
   background-color: var(--backgroundcolor);
 }
+.card-body {
+  background-color: var(--backgroundcolor);
+}
 .primary {
   color: var(--fontprimary);
 }
@@ -23,7 +26,7 @@ section {
 }
 
 .rotate-icon {
-  animation: rotate360 4s linear infinite;
+  animation: rotate360 10s linear infinite;
 }
 .main-skill {
   transition: transform 1s;
@@ -71,6 +74,12 @@ section {
   padding-top: 2.5rem;
   /* margin-bottom: 5.5rem;
   padding-bottom: 2.5rem; */
+}
+.contact {
+  margin-top: 5.5rem;
+  padding-top: 2.5rem;
+
+  padding-bottom: 2.5rem;
 }
 .projects {
   margin-top: 5.5rem;
