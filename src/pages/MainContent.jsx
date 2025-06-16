@@ -1,119 +1,154 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
+import meetupimage from "../assets/meetup.png";
+import pendoraimage from "../assets/pendora.png";
+import resumePDF from "../assets/resume.pdf";
+
+import { useState } from "react";
+
 const MainContent = () => {
+  const [message, setMessage] = useState(true);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "81435d6b-ec00-45ca-9e73-a46f916ae9c0");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
   return (
     <section>
       <Navbar />
-      <section id="about" className=" container ">
-        <div className="row">
-          <div className="col-12 col-md-8 info">
+
+      <section id="about" className="container py-4">
+        <div className="row align-items-center">
+          {/* Left Column - Info */}
+          <div className="col-12 col-lg-8 order-2 order-lg-1 info">
             <div>
               <h1 className="primary name">Alok Kumar</h1>
-              <p className="h5  text-secondary">Full Stack Web Developer</p>
+              <p className="h5 text-secondary">Full Stack Web Developer</p>
             </div>
-            <div className="d-flex mt-4 mb-4">
+
+            <div className="d-flex flex-wrap mt-3 mb-3 gap-2">
               <div className="text-secondary">
-                <i className="bi bi-envelope "></i>&nbsp;
-                alok.8kumar21@gmail.com
+                <i className="bi bi-envelope"></i>&nbsp; alok.8kumar21@gmail.com
               </div>
-              <div className=" ms-3 text-secondary">
+              <div className="text-secondary">
                 <i className="bi bi-geo-alt"></i>&nbsp; Ayodhya, India
               </div>
             </div>
+
             <div>
               <p className="text-secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                tempora nisi odio, dolore, sunt incidunt blanditiis repudiandae
-                dolorem nostrum animi quas facilis est sint id recusandae at
-                reprehenderit enim vel illum repellendus cumque deleniti ipsum!
-                Porro molestiae dolore molestias vero voluptatem, sint, eum.
+                A passionate and motivated software developer eager to kickstart
+                my career in web development. Skilled in modern technologies
+                like React.Js and Node.js, and excited to build user-friendly
+                applications and keep learning every day.
               </p>
             </div>
-            <div className="mt-4 mb-4">
-              <Link download={true} className="btn btn-light ">
-                <i className="bi bi-download"></i>&nbsp;&nbsp;Resume
-              </Link>
-              <Link
-                to="https://github.com/alok-kumar21"
-                className="btn ms-3 border"
+
+            <div className="mt-3 mb-3 d-flex flex-wrap gap-2">
+              <a
+                href={resumePDF}
+                download="AlokKumar-Resume.pdf"
+                className="btn btn-light"
               >
+                <i className="bi bi-download"></i>&nbsp;&nbsp;Resume
+              </a>
+              <Link to="https://github.com/alok-kumar21" className="btn border">
                 <i className="bi bi-github text-secondary"></i>
               </Link>
-              <Link
-                to="mailto:alok.8kumar21@gmail.com"
-                className="btn ms-3 border"
-              >
+              <Link to="mailto:alok.8kumar21@gmail.com" className="btn border">
                 <i className="bi bi-envelope text-secondary"></i>
               </Link>
               <Link
                 to="https://www.linkedin.com/in/iamalokkumar/"
-                className="btn ms-3  border"
+                className="btn border"
               >
-                <i className="bi bi-linkedin  text-secondary"></i>
+                <i className="bi bi-linkedin text-secondary"></i>
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-4    name">
-            <div className="mt-4">
-              <span type="button" className="position-relative">
-                <div className="main-skill ms-5 border-0 p-3 rounded bg-dark d-inline-block">
+
+          {/* Right Column - Skills */}
+          <div className="col-12 col-lg-4 order-1 order-lg-2 name mb-4 mb-lg-0">
+            <div className="d-flex justify-content-center flex-wrap gap-4 gap-md-4">
+              {/* Skill 1 */}
+              <div className="position-relative text-center">
+                <div className="main-skill border-0 p-3 rounded bg-dark d-inline-block">
                   <img
-                    className="img-fluid "
+                    className="img-fluid"
                     src="https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png&color=000000"
                     alt="react-image"
-                    style={{ width: "70px", height: "70px" }}
+                    style={{ width: "60px", height: "60px" }}
                   />
                 </div>
-                <span className="position-absolute top-0 text-success start-0 translate-middle badge rounded-pill bg-dark">
+                <span className="d-block mt-2 text-success badge rounded-pill bg-dark">
                   MongoDB
                 </span>
-              </span>
+              </div>
 
-              <span type="button" className="position-relative">
-                <div className="main-skill ms-4 border-0 p-3 rounded bg-dark d-inline-block">
+              {/* Skill 2 */}
+              <div className="position-relative text-center">
+                <div className="main-skill border-0 p-3 rounded bg-dark d-inline-block">
                   <img
                     className="img-fluid"
                     src="https://img.icons8.com/?size=100&id=PZQVBAxaueDJ&format=png&color=000000"
                     alt="nodejs-image"
-                    style={{ width: "70px", height: "70px" }}
+                    style={{ width: "60px", height: "60px" }}
                   />
                 </div>
-                <span className="position-absolute top-0 text-warning start-100 ms-5 translate-middle badge rounded-pill bg-dark">
+                <span className="d-block mt-2 text-warning badge rounded-pill bg-dark">
                   ExpressJs
                 </span>
-              </span>
+              </div>
             </div>
-            <br />
-
-            <div className="mt-2">
-              <span type="button" className="position-relative">
-                <div className="main-skill ms-5 border-0 p-3 rounded bg-dark d-inline-block">
+            {/* Skill 3 */}
+            <div className="mt-4 d-flex justify-content-center flex-wrap gap-4 gap-md-4">
+              <div className="position-relative text-center">
+                <div className="main-skill border-0 p-3 rounded bg-dark d-inline-block">
                   <img
                     className="rotate-icon img-fluid"
                     src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000"
                     alt="react-image"
-                    style={{ width: "70px", height: "70px" }}
+                    style={{ width: "60px", height: "60px" }}
                   />
                 </div>
-                <span className="position-absolute top-100 text-primary start-0 translate-middle badge rounded-pill bg-dark">
+                <span className="d-block mt-2 text-primary badge rounded-pill bg-dark">
                   React Js
                 </span>
-              </span>
+              </div>
 
-              <span type="button" className="position-relative">
-                <div className="main-skill ms-4 border-0 p-3 rounded bg-dark d-inline-block">
+              {/* Skill 4 */}
+              <div className="position-relative text-center">
+                <div className="main-skill border-0 p-3 rounded bg-dark d-inline-block">
                   <img
                     className="img-fluid"
                     src="https://img.icons8.com/?size=100&id=54087&format=png&color=000000"
                     alt="nodejs-image"
-                    style={{ width: "70px", height: "70px" }}
+                    style={{ width: "60px", height: "60px" }}
                   />
                 </div>
-                <span className="position-absolute top-100 text-success start-100 ms-5 translate-middle badge rounded-pill bg-dark">
+                <span className="d-block mt-2 text-success badge rounded-pill bg-dark">
                   Node Js
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -293,11 +328,7 @@ const MainContent = () => {
         <div className="card     mt-5">
           <div className="row g-0">
             <div className="col-md-4">
-              <img
-                src="https://private-user-images.githubusercontent.com/69728237/446382811-0c04885f-e37c-4b2a-9fa5-ae5253e619bf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0ODEyNjMsIm5iZiI6MTc0OTQ4MDk2MywicGF0aCI6Ii82OTcyODIzNy80NDYzODI4MTEtMGMwNDg4NWYtZTM3Yy00YjJhLTlmYTUtYWU1MjUzZTYxOWJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDE0NTYwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI5YTg5NzE3M2NhMjExMzg5NTk4MTljNjk1YmNiOTEyZTA3ZmRiNzY4MjI0YTlmNTEwOGM5YTFiY2NlNjA2Y2YmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.xWItc7FbYmx0mvMmC4CNj1mJO9hTtEFUIP8b4KJar5w"
-                alt=""
-                className="w-100 img-fluid"
-              />
+              <img src={pendoraimage} alt="" className="w-100 img-fluid" />
             </div>
             <div className="col-md-8">
               <div className="card-body ">
@@ -345,7 +376,7 @@ const MainContent = () => {
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src="https://private-user-images.githubusercontent.com/69728237/424608071-23af58f2-276d-4f62-bf02-b9d41a53c579.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0ODM5NDgsIm5iZiI6MTc0OTQ4MzY0OCwicGF0aCI6Ii82OTcyODIzNy80MjQ2MDgwNzEtMjNhZjU4ZjItMjc2ZC00ZjYyLWJmMDItYjlkNDFhNTNjNTc5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA5VDE1NDA0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ3OTQxNzU4ZDJjZDM4MDk1MWI3M2UxOGJkNTk5MWM4OWE3ODM3ZDM1YzFiNjdiZmRmZTdiYzY1OGYyMWVkMTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BiCLgw2eoZ194bscw5jqZQ8pSSrinM1lFWWM73TO3V8"
+                src={meetupimage}
                 alt="meetup image"
                 className="w-100 img-fluid"
               />
@@ -392,54 +423,54 @@ const MainContent = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className="contact  autoShow container">
-        <div>
-          <h1 className="text-white">Contact Me</h1>
-          <div className="row">
-            <div className="col-md-6">
-              <div>
-                <h5 className="text-white mt-4">Get in Touch</h5>
-              </div>
 
-              <div>
-                <div className="d-flex mt-5 ">
-                  <div className="d-inline mt-3">
-                    <span class="bi bi-envelope text-white h5 bg-dark p-3  rounded-circle"></span>
+      <section id="contact" className="contact py-5">
+        <div className="container">
+          <h1 className="text-white mb-5 text-center">Contact Me</h1>
+
+          <div className="row g-4">
+            {/* Contact Info Column */}
+            <div className="col-lg-6">
+              <div className="contact-info p-4 p-md-5 rounded-3  h-100">
+                <h3 className="text-white mb-4">Get in Touch</h3>
+
+                {/* Email */}
+                <div className="d-flex align-items-center mb-4">
+                  <div className="contact-icon bg-dark rounded-circle d-flex align-items-center justify-content-center me-4">
+                    <i className="bi bi-envelope text-white fs-4"></i>
                   </div>
-                  <div className="d-inline ms-3 ">
-                    <span className="text-secondary  text-center">Email</span>
-                    <br />
-                    <span className="text-white text-center">
+                  <div>
+                    <p className="text-secondary mb-1">Email</p>
+                    <a
+                      href="mailto:alok.8kumar21@gmail.com"
+                      className="text-white text-decoration-none"
+                    >
                       alok.8kumar21@gmail.com
-                    </span>
+                    </a>
                   </div>
                 </div>
-                <div className="d-flex mt-4 ">
-                  <div className="d-inline mt-3">
-                    <span class="bi bi-geo-alt text-white h5 bg-dark p-3  rounded-circle"></span>
+
+                {/* Location */}
+                <div className="d-flex align-items-center mb-4">
+                  <div className="contact-icon bg-dark rounded-circle d-flex align-items-center justify-content-center me-4">
+                    <i className="bi bi-geo-alt text-white fs-4"></i>
                   </div>
-                  <div className="d-inline ms-3 ">
-                    <span className="text-secondary  text-center">
-                      Location
-                    </span>
-                    <br />
-                    <span className="text-white text-center">
-                      Ayodhya, India
-                    </span>
+                  <div>
+                    <p className="text-secondary mb-1">Location</p>
+                    <p className="text-white mb-0">Ayodhya, India</p>
                   </div>
                 </div>
-                <div className="d-flex mt-4 ">
-                  <div className="d-inline mt-3">
-                    <span class="bi bi-linkedin text-white h5 bg-dark p-3  rounded-circle"></span>
+
+                {/* LinkedIn */}
+                <div className="d-flex align-items-center">
+                  <div className="contact-icon bg-dark rounded-circle d-flex align-items-center justify-content-center me-4">
+                    <i className="bi bi-linkedin text-white fs-4"></i>
                   </div>
-                  <div className="d-inline ms-3 ">
-                    <span className="text-secondary  text-center">
-                      Linkedin
-                    </span>
-                    <br />
+                  <div>
+                    <p className="text-secondary mb-1">LinkedIn</p>
                     <Link
                       to="https://www.linkedin.com/in/iamalokkumar/"
-                      className="text-white text-center"
+                      className="text-white "
                       target="_blank"
                     >
                       linkedin.com/in/iamalokkumar
@@ -448,47 +479,88 @@ const MainContent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 autoShow">
-              <div>
-                <h5 className="text-white mt-4">Send a Message</h5>
-              </div>
-              <form className="mt-5">
-                <label className="form-label text-white" htmlFor="name">
-                  Name
-                </label>
-                <br />
-                <input
-                  className="form-control"
-                  type="text"
-                  id="name"
-                  placeholder="Name"
-                />
-                <label className="form-label text-white mt-4" htmlFor="email">
-                  Email
-                </label>
-                <br />
-                <input
-                  className="form-control"
-                  type="email"
-                  placeholder="Email"
-                />
-                <br />
-                <label className="form-label text-white" htmlFor="">
-                  Message
-                </label>
-                <br />
-                <textarea
-                  className="form-control"
-                  name=""
-                  rows="5"
-                  cols="40"
-                  id=""
-                  placeholder="Your Message"
-                ></textarea>
-                <button type="submit" className="btn mt-4 btn-light">
-                  Submit Message
-                </button>
-              </form>
+
+            {/* Form Column */}
+            <div className="col-lg-6">
+              {message ? (
+                <div className="contact-form p-4 p-md-5 rounded-3  h-100">
+                  <h3 className="text-white mb-4">Send a Message</h3>
+
+                  <form onSubmit={onSubmit}>
+                    <div className="mb-4">
+                      <label htmlFor="name" className="form-label text-white">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control border-0 text-white"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="email" className="form-label text-white">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="form-control border-0 text-white"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label
+                        htmlFor="message"
+                        className="form-label text-white"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        className="form-control border-0 text-white"
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Your message"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <button
+                      onClick={() => setMessage(false)}
+                      type="submit"
+                      className="btn btn-light w-100 py-2"
+                    >
+                      Submit Message
+                    </button>
+                  </form>
+                </div>
+              ) : (
+                <div className="contact-success p-4 p-md-5 rounded-3  border border-success h-100">
+                  <div className="text-center">
+                    <i className="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+                    <h3 className="text-white mb-3">
+                      Message Sent Successfully
+                    </h3>
+                    <p className="text-secondary mb-4">
+                      Thank you for reaching out. I'll get back to you as soon
+                      as possible.
+                    </p>
+                    <button
+                      onClick={() => setMessage(true)}
+                      className="btn btn-outline-light px-4"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

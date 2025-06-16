@@ -66,14 +66,10 @@ section {
 .education {
   margin-top: 5.5rem;
   padding-top: 2.5rem;
-  margin-bottom: 5.5rem;
-  padding-bottom: 2.5rem;
 }
 .skills {
   margin-top: 5.5rem;
   padding-top: 2.5rem;
-  /* margin-bottom: 5.5rem;
-  padding-bottom: 2.5rem; */
 }
 .contact {
   margin-top: 5.5rem;
@@ -84,9 +80,40 @@ section {
 .projects {
   margin-top: 5.5rem;
   padding-top: 2.5rem;
-  /* margin-bottom: 5.5rem;
-  padding-bottom: 2.5rem; */
 }
 .skills img {
   width: 30px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.contact-info,
+.contact-form,
+.contact-success {
+  transition: all 0.3s ease;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  padding: 12px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+@media (max-width: 768px) {
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
