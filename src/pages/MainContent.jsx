@@ -180,6 +180,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
+
       <section id="skills" className="skills autoShow container">
         <div>
           <h1 className="text-white">Skills</h1>
@@ -187,140 +188,120 @@ const MainContent = () => {
             Technologies and tools I've worked with throughout my projects
           </p>
         </div>
+
+        {/* Frontend */}
         <div className="mt-5 autoShow">
           <h4 className="text-white">Frontend</h4>
         </div>
-        <div className="d-flex mt-4 autoShow">
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-3030115.png?f=webp&w=512"
-                alt="html-image"
-                className="img-fluid ms-1"
-              />
+        <div className="row mt-4 autoShow g-3">
+          {[
+            {
+              name: "HTML",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-3030115.png?f=webp&w=512",
+            },
+            {
+              name: "CSS",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-css-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226088.png?f=webp&w=512",
+            },
+            {
+              name: "Javascript",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225993.png?f=webp&w=512",
+            },
+            {
+              name: "Bootstrap",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226077.png?f=webp&w=512",
+            },
+            {
+              name: "React.js",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945110.png?f=webp&w=512",
+            },
+          ].map((item, index) => (
+            <div className="col-6 col-md-4 col-lg-auto text-center" key={index}>
+              <div className="border-0 bg-dark p-3 rounded">
+                <img
+                  src={item.src}
+                  alt={`${item.name}-image`}
+                  className="img-fluid"
+                />
+              </div>
+              <p className="text-secondary mt-1">{item.name}</p>
             </div>
-            <p className="text-center text-secondary mt-1">HTML</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-css-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226088.png?f=webp&w=512"
-                alt="css-image"
-                className="img-fluid"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-3">CSS</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225993.png?f=webp&w=512"
-                alt="javascript-image"
-                className="img-fluid"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-3">Javascript</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226077.png?f=webp&w=512"
-                alt="bootstrap-image"
-                className="img-fluid"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-3">Bootstrap</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945110.png?f=webp&w=512"
-                alt="react-image"
-                className="img-fluid"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-4">React.js</p>
-          </div>
+          ))}
         </div>
+
+        {/* Backend */}
         <div className="mt-4 autoShow">
           <h4 className="text-white">Backend</h4>
         </div>
-
-        <div className="d-flex mt-4 autoShow">
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226035.png?f=webp&w=512"
-                alt="nodejs-image"
-                className="img-fluid ms-1"
-              />
+        <div className="row mt-4 autoShow g-3">
+          {[
+            {
+              name: "Node.js",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-nodejs-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226035.png?f=webp&w=512",
+            },
+            {
+              name: "Express.js",
+              src: "https://cdn.iconscout.com/icon/premium/png-512-thumb/express-js-11217528-9200532.png?f=webp&w=512",
+            },
+            {
+              name: "MongoDB",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-mongodb-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-logo-freebies-pack-logos-icons-1175138.png?f=webp&w=512",
+            },
+          ].map((item, index) => (
+            <div className="col-6 col-md-4 col-lg-auto text-center" key={index}>
+              <div className="border-0 bg-dark p-3 rounded">
+                <img
+                  src={item.src}
+                  alt={`${item.name}-image`}
+                  className="img-fluid"
+                />
+              </div>
+              <p className="text-secondary mt-1">{item.name}</p>
             </div>
-            <p className="text-center text-secondary mt-1">Node.js</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/premium/png-512-thumb/express-js-11217528-9200532.png?f=webp&w=512 "
-                alt="expressjs-image"
-                className="img-fluid ms-1 "
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-4">Express.js</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-logo-freebies-pack-logos-icons-1175138.png?f=webp&w=512"
-                alt="mongodb-image"
-                className="img-fluid ms-1"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-4">MongoDB</p>
-          </div>
+          ))}
         </div>
 
+        {/* Tools */}
         <div className="mt-4 autoShow">
           <h4 className="text-white">Tools & Platforms</h4>
         </div>
-        <div className="d-flex mt-4 autoShow">
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-git-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175218.png?f=webp&w=512"
-                alt="git-image"
-                className="img-fluid ms-1"
-              />
+        <div className="row mt-4 autoShow g-3">
+          {[
+            {
+              name: "git",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-git-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175218.png?f=webp&w=512",
+            },
+            {
+              name: "github",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-github-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226096.png?f=webp&w=512",
+            },
+            {
+              name: "vscode",
+              src: "https://cdn.iconscout.com/icon/free/png-512/free-vscode-logo-icon-download-in-svg-png-gif-file-formats--social-media-technology-brand-pack-logos-icons-3365471.png?f=webp&w=512",
+            },
+            {
+              name: "Vercel",
+              icon: <i className="bi bi-caret-up-fill text-white h3"></i>,
+            },
+          ].map((item, index) => (
+            <div className="col-6 col-md-4 col-lg-auto text-center" key={index}>
+              <div className="border-0 bg-dark p-3 rounded">
+                {item.icon ? (
+                  item.icon
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={`${item.name}-image`}
+                    className="img-fluid"
+                  />
+                )}
+              </div>
+              <p className="text-secondary mt-1">{item.name}</p>
             </div>
-            <p className="text-center text-secondary mt-1 ">git</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-github-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226096.png?f=webp&w=512"
-                alt="github-image"
-                className="img-fluid ms-1"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-4 ">github</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <img
-                src="https://cdn.iconscout.com/icon/free/png-512/free-vscode-logo-icon-download-in-svg-png-gif-file-formats--social-media-technology-brand-pack-logos-icons-3365471.png?f=webp&w=512"
-                alt="vscode-image"
-                className="img-fluid ms-1"
-              />
-            </div>
-            <p className="text-center text-secondary mt-1 ms-4">vscode</p>
-          </div>
-          <div>
-            <div className="border-0 bg-dark p-3 rounded ms-4">
-              <i className="bi bi-caret-up-fill text-white h3"></i>
-            </div>
-            <p className="text-center text-secondary mt-1 ms-3">Vercel</p>
-          </div>
+          ))}
         </div>
       </section>
+
       <section id="projects" className="projects autoShow container">
         <div>
           <h1 className="text-white">Projects</h1>
@@ -493,7 +474,7 @@ const MainContent = () => {
                       </label>
                       <input
                         type="text"
-                        className="form-control border-0 text-white"
+                        className="form-control border-0 "
                         id="name"
                         name="name"
                         placeholder="Your name"
@@ -507,7 +488,7 @@ const MainContent = () => {
                       </label>
                       <input
                         type="email"
-                        className="form-control border-0 text-white"
+                        className="form-control border-0 "
                         id="email"
                         name="email"
                         placeholder="Your email"
@@ -523,7 +504,7 @@ const MainContent = () => {
                         Message
                       </label>
                       <textarea
-                        className="form-control border-0 text-white"
+                        className="form-control border-0 "
                         id="message"
                         name="message"
                         rows="5"
