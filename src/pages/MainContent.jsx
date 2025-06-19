@@ -328,7 +328,7 @@ const MainContent = () => {
                 <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
                 <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
                 <span class="badge text-bg-dark mb-3  ms-3">Context API</span>
-
+                <h4 className="text-white">Key Features</h4>
                 <ul className="text-secondary">
                   <li>Search product.</li>
                   <li> Add item to cart.</li>
@@ -378,7 +378,7 @@ const MainContent = () => {
                 <span class="badge text-bg-dark mb-3  ms-3">Node.js</span>
                 <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
                 <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
-
+                <h4 className="text-white">Key Features</h4>
                 <ul className="text-secondary">
                   <li>Event Listing</li>
                   <li>Search a Event</li>
