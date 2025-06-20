@@ -1,12 +1,37 @@
-# React + Vite
+# ALOK KUMAR Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a passionate web developer who loves turning ideas into interactive websites. I enjoy working with modern technologies like React, Node.js, and MongoDB. Most of my learning comes from building real projects and exploring new tools. I'm always looking to improve and build cool things on the web!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo Link
 
-## Expanding the ESLint configuration
+[Live Demo](https://alok-kumar-portfolio.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Quick Start
+
+```
+git clone https://github.com/alok-kumar21/AlokKumar-Portfolio.git
+cd <your-repo>
+npm install
+npm run dev
+
+```
+
+## Technologies
+
+- React JS
+- React Router
+- HTML
+- CSS
+
+## Demo Video
+
+Watch a walkthrough (5–7 minutes) of all major features of this app:
+[Loom Video Link]()
+
+## Contact
+
+For bugs or feature requests, please reach out to alok.8kumar21@gmail.com
