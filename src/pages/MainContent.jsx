@@ -306,10 +306,19 @@ const MainContent = () => {
         <div>
           <h1 className="text-white">Projects</h1>
         </div>
-        <div className="card     mt-5">
+        <div className="card  mt-5">
           <div className="row g-0">
             <div className="col-md-4">
-              <img src={pendoraimage} alt="" className="w-100 img-fluid" />
+              <div
+                style={{ width: "445px", height: "380px", overflow: "auto" }}
+              >
+                <img
+                  src={pendoraimage}
+                  alt="pendora image"
+                  className="w-100 img-fluid"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             </div>
             <div className="col-md-8">
               <div className="card-body ">
@@ -360,6 +369,7 @@ const MainContent = () => {
                 src={meetupimage}
                 alt="meetup image"
                 className="w-100 img-fluid"
+                style={{ objectFit: "cover" }}
               />
             </div>
             <div className="col-md-8">
