@@ -301,8 +301,8 @@ const MainContent = () => {
           ))}
         </div>
       </section>
-
-      <section id="projects" className="projects autoShow container">
+      {/* Projects */}
+      {/* <section id="projects" className="projects autoShow container">
         <div>
           <h1 className="text-white">Projects</h1>
         </div>
@@ -408,6 +408,122 @@ const MainContent = () => {
                   target="_blank"
                 >
                   <i class="bi bi-github "></i>&nbsp;github
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section id="projects" className="projects autoShow container">
+        <div>
+          <h1 className="text-white">Projects</h1>
+        </div>
+
+        {/* Pendora Project Card */}
+        <div className="card mt-5">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <div style={{ width: "100%", height: "380px", overflow: "auto" }}>
+                <img
+                  src={pendoraimage}
+                  alt="Pendora project"
+                  className="w-100 img-fluid"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h3 className="card-title text-white">Pendora</h3>
+                <p className="card-text text-secondary">
+                  Pendora is a MERN stack (MongoDB, Express, React, Node.js)
+                  application designed to help users discover and explore
+                  various products. It includes product filtering by price and
+                  rating, a search feature, and the ability to add products to
+                  the cart or wishlist.
+                </p>
+                <div className="mb-3">
+                  <span className="badge text-bg-dark me-2">React</span>
+                  <span className="badge text-bg-dark me-2">Express.js</span>
+                  <span className="badge text-bg-dark me-2">Node.js</span>
+                  <span className="badge text-bg-dark me-2">MongoDB</span>
+                  <span className="badge text-bg-dark me-2">Bootstrap</span>
+                  <span className="badge text-bg-dark">Context API</span>
+                </div>
+                <h4 className="text-white">Key Features</h4>
+                <ul className="text-secondary">
+                  <li>Search for products</li>
+                  <li>Add item to cart</li>
+                  <li>Remove item from cart</li>
+                  <li>Add item to wishlist</li>
+                </ul>
+                <Link
+                  to="https://pendora-frontend.vercel.app/"
+                  className="btn btn-light"
+                  target="_blank"
+                >
+                  <i className="bi bi-box-arrow-up-right"></i>&nbsp;Live
+                </Link>
+                <Link
+                  to="https://github.com/alok-kumar21/Pendora-frontend"
+                  className="btn btn-outline-light ms-4"
+                  target="_blank"
+                >
+                  <i className="bi bi-github"></i>&nbsp;GitHub
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Meetup Project Card */}
+        <div className="card autoShow mt-5">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img
+                src={meetupimage}
+                alt="MeetUp project"
+                className="w-100 img-fluid"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h3 className="card-title text-white">MeetUp</h3>
+                <p className="card-text text-secondary">
+                  MeetUp is a MERN stack application designed to help users
+                  discover and explore events. It features event listings with
+                  filtering options for online/offline events, keyword search,
+                  and detailed event views.
+                </p>
+                <div className="mb-3">
+                  <span className="badge text-bg-dark me-2">React</span>
+                  <span className="badge text-bg-dark me-2">Express.js</span>
+                  <span className="badge text-bg-dark me-2">Node.js</span>
+                  <span className="badge text-bg-dark me-2">MongoDB</span>
+                  <span className="badge text-bg-dark">Bootstrap</span>
+                </div>
+                <h4 className="text-white">Key Features</h4>
+                <ul className="text-secondary">
+                  <li>Event listing</li>
+                  <li>Search events</li>
+                  <li>View event details</li>
+                  <li>Filter by online/offline</li>
+                </ul>
+                <Link
+                  to="https://meet-up-frontend-chi.vercel.app/"
+                  className="btn btn-light"
+                  target="_blank"
+                >
+                  <i className="bi bi-box-arrow-up-right"></i>&nbsp;Live
+                </Link>
+                <Link
+                  to="https://github.com/alok-kumar21/MeetUp-frontend"
+                  className="btn btn-outline-light ms-4"
+                  target="_blank"
+                >
+                  <i className="bi bi-github"></i>&nbsp;GitHub
                 </Link>
               </div>
             </div>
