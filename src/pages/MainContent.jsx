@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-import meetupimage from "../assets/meetup.png";
+import linkupimage from "../assets/LinkUp.png";
 import pendoraimage from "../assets/pendora.png";
 import resumePDF from "../assets/resume.pdf";
 
@@ -302,118 +302,6 @@ const MainContent = () => {
         </div>
       </section>
       {/* Projects */}
-      {/* <section id="projects" className="projects autoShow container">
-        <div>
-          <h1 className="text-white">Projects</h1>
-        </div>
-        <div className="card  mt-5">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <div
-                style={{ width: "445px", height: "380px", overflow: "auto" }}
-              >
-                <img
-                  src={pendoraimage}
-                  alt="pendora image"
-                  className="w-100 img-fluid"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </div>
-            <div className="col-md-8">
-              <div className="card-body ">
-                <h3 className="card-title text-white">Pendora</h3>
-                <p className="card-text text-secondary">
-                  The Pendora is a MERN stack (MongoDB, Express, React, Node.js)
-                  application designed to help users discover and explore
-                  various products. It features a list of Products with
-                  filtering options By Price, rating, and Product, search,
-                  Product add to Cart, and add to wish list, making it easy to
-                  find relevant products.
-                </p>
-                <span class="badge text-bg-dark mb-3">React</span>
-                <span class="badge text-bg-dark mb-3 ms-3">Express.js</span>
-                <span class="badge text-bg-dark mb-3  ms-3">Node.js</span>
-                <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
-                <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
-                <span class="badge text-bg-dark mb-3  ms-3">Context API</span>
-                <h4 className="text-white">Key Features</h4>
-                <ul className="text-secondary">
-                  <li>Search product.</li>
-                  <li> Add item to cart.</li>
-                  <li>Remove item from cart</li>
-                  <li>Add item to wishlist.</li>
-                </ul>
-                <Link
-                  to="https://pendora-frontend.vercel.app/"
-                  className="btn  btn-light"
-                  target="_blank"
-                >
-                  <i class="bi bi-box-arrow-up-right"></i>&nbsp;Live
-                </Link>
-                <Link
-                  to="https://github.com/alok-kumar21/Pendora-frontend"
-                  className="btn  btn-outline-light ms-4"
-                  target="_blank"
-                >
-                  <i class="bi bi-github"></i>&nbsp;github
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card  autoShow   mt-5">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img
-                src={meetupimage}
-                alt="meetup image"
-                className="w-100 img-fluid"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body ">
-                <h3 className="card-title text-white">MeetUp</h3>
-                <p className="card-text text-secondary">
-                  The Meetup App is a MERN stack (MongoDB, Express, React,
-                  Node.js) application designed to help users discover and
-                  explore various events. It features a list of meetup events
-                  with filtering options for online and offline events, making
-                  it easy to find relevant gatherings. A search bar allows users
-                  to quickly locate specific events by keywords.
-                </p>
-                <span class="badge text-bg-dark mb-3">React</span>
-                <span class="badge text-bg-dark mb-3 ms-3">Express.js</span>
-                <span class="badge text-bg-dark mb-3  ms-3">Node.js</span>
-                <span class="badge text-bg-dark mb-3  ms-3">MongoDB</span>
-                <span class="badge text-bg-dark mb-3 ms-3">Bootstrap</span>
-                <h4 className="text-white">Key Features</h4>
-                <ul className="text-secondary">
-                  <li>Event Listing</li>
-                  <li>Search a Event</li>
-                  <li>View Detail Event</li>
-                  <li>Filter Online and offline Events.</li>
-                </ul>
-                <Link
-                  to="https://meet-up-frontend-chi.vercel.app/"
-                  className="btn  btn-light"
-                  target="_blank"
-                >
-                  <i class="bi bi-box-arrow-up-right"></i>&nbsp;Live
-                </Link>
-                <Link
-                  to="https://github.com/alok-kumar21/MeetUp-frontend"
-                  className="btn  btn-outline-light ms-4"
-                  target="_blank"
-                >
-                  <i class="bi bi-github "></i>&nbsp;github
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section id="projects" className="projects autoShow container">
         <div>
@@ -482,7 +370,7 @@ const MainContent = () => {
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src={meetupimage}
+                src={linkupimage}
                 alt="MeetUp project"
                 className="w-100 img-fluid"
                 style={{ objectFit: "cover" }}
@@ -490,7 +378,7 @@ const MainContent = () => {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h3 className="card-title text-white">MeetUp</h3>
+                <h3 className="card-title text-white">LinkUp</h3>
                 <p className="card-text text-secondary">
                   The LinkUp App is a MERN stack (MongoDB, Express, React,
                   Node.js) application designed to help users discover and
