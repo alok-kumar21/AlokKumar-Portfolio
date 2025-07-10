@@ -492,10 +492,13 @@ const MainContent = () => {
               <div className="card-body">
                 <h3 className="card-title text-white">MeetUp</h3>
                 <p className="card-text text-secondary">
-                  MeetUp is a MERN stack application designed to help users
-                  discover and explore events. It features event listings with
-                  filtering options for online/offline events, keyword search,
-                  and detailed event views.
+                  The LinkUp App is a MERN stack (MongoDB, Express, React,
+                  Node.js) application designed to help users discover and
+                  explore various events. It features a list of LinkUp events
+                  with filtering options for online and offline events, making
+                  it easy to find relevant gatherings. A search bar allows users
+                  to quickly locate specific events by keywords. Built with a
+                  React frontend, Node.js/Express backend, MongoDB database
                 </p>
                 <div className="mb-3">
                   <span className="badge text-bg-dark me-2">React</span>
@@ -512,14 +515,14 @@ const MainContent = () => {
                   <li>Filter by online/offline</li>
                 </ul>
                 <Link
-                  to="https://meet-up-frontend-chi.vercel.app/"
+                  to="https://link-up-frontend-kohl.vercel.app/"
                   className="btn btn-light"
                   target="_blank"
                 >
                   <i className="bi bi-box-arrow-up-right"></i>&nbsp;Live
                 </Link>
                 <Link
-                  to="https://github.com/alok-kumar21/MeetUp-frontend"
+                  to="https://github.com/alok-kumar21/LinkUp-frontend"
                   className="btn btn-outline-light ms-4"
                   target="_blank"
                 >
