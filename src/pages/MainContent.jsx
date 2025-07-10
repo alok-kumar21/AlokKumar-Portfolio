@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-import linkupimage from "../assets/LinkUp.png";
+import linkupimage from "../assets/linkup.png";
 import pendoraimage from "../assets/pendora.png";
 import resumePDF from "../assets/resume.pdf";
 
