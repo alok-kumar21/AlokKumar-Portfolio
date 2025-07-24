@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import linkupimage from "../assets/linkup.png";
 import pendoraimage from "../assets/pendora.png";
@@ -71,14 +72,23 @@ const MainContent = () => {
               >
                 <i className="bi bi-download"></i>&nbsp;&nbsp;Resume
               </a>
-              <Link to="https://github.com/alok-kumar21" className="btn border">
+              <Link
+                to="https://github.com/alok-kumar21"
+                target="_blank"
+                className="btn border"
+              >
                 <i className="bi bi-github text-secondary"></i>
               </Link>
-              <Link to="mailto:alok.8kumar21@gmail.com" className="btn border">
+              <Link
+                to="mailto:alok.8kumar21@gmail.com"
+                target="_blank"
+                className="btn border"
+              >
                 <i className="bi bi-envelope text-secondary"></i>
               </Link>
               <Link
                 to="https://www.linkedin.com/in/iamalokkumar/"
+                target="_blank"
                 className="btn border"
               >
                 <i className="bi bi-linkedin text-secondary"></i>
@@ -563,6 +573,7 @@ const MainContent = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </section>
   );
 };
