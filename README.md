@@ -4,12 +4,6 @@ I'm a passionate web developer who loves turning ideas into interactive websites
 
 ---
 
-## Demo Link
-
-[Live Demo](https://alok-kumar-portfolio.vercel.app/)
-
----
-
 ## Quick Start
 
 ```
