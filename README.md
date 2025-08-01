@@ -21,11 +21,7 @@ npm run dev
 - HTML
 - CSS
 
-## Demo Video
-
-Watch a walkthrough (5–7 minutes) of all major features of this app:
-[Loom Video Link]()
-
+---
 ## Contact
 
 For bugs or feature requests, please reach out to alok.8kumar21@gmail.com
